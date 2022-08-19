@@ -130,12 +130,5 @@ public class TechJobs {
                   System.out.println("core competency: "+job.get("core competency")+"\n*****\n");
               }
           }
-
-//        columnChoices.put("core competency", "Skill");
-//        columnChoices.put("employer", "Employer");
-//        columnChoices.put("location", "Location");
-//        columnChoices.put("position type", "Position Type");
-//        columnChoices.put("all", "All");
-//        System.out.println("printJobs is not implemented yet");
     }
 }
