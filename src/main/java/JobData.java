@@ -75,18 +75,19 @@ public class JobData {
 
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
 
+        String searchTerm = value.toUpperCase();
+
         for (HashMap<String, String> row : allJobs) {
 
             String aValue = row.get(column);
 
-            if (aValue.contains(value)) {
+            if (aValue.toUpperCase().contains(searchTerm)) {
                 jobs.add(row);
             }
         }
 
         return jobs;
     }
-
     /**
      * Search all columns for the given term
      *
@@ -100,9 +101,11 @@ public class JobData {
 
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
 
+        String searchTerm = value.toUpperCase();
+
         for (HashMap <String,String> row: allJobs) {
             for (String field : row.values()) {
-                if (field.contains(value)){
+                if (field.toUpperCase().contains(searchTerm)){
                     jobs.add(row);
                     break;
                 }
